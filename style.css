@@ -5,11 +5,12 @@ body {
 
 
 .container {
-    width: 600px;  
+    width: 900px;  
+    height: 500px;
     background-color: #d3d3d3; /*cor do fundo*/
     display: flex; 
-    flex-direction: column; /*orientação linha*/
-    align-items: center; /*alinhar ao centro*/
+    flex-direction: row;
+    justify-content: center;
     margin: auto; /*margem automatica*/
     padding: 40px; /*margem interna*/
     border-radius: 4px; /*arrendondar borda*/
@@ -28,6 +29,11 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0, 0,0,0.2);
 }
 
+.calc-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
 input {
     height: 22px;
     width: 280px;
@@ -35,6 +41,7 @@ input {
     font-size: 1.2rem;
     margin: 15px 70px;
     border-radius: 5px;
+    text-align: right;
 }
 
 input[type=number]:focus {
@@ -57,4 +64,25 @@ button {
 button:hover {
     background-color: #0069d9; /*button hover é quando o mouse passa pelo botão*/
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.history {
+    background-color: #000;
+    color: #fff; 
+
+    width: 400px; 
+
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.history-title{
+    display: flex;
+    justify-content: center;
+}
+
+.last-operations {
+    text-align: right;
+    padding:20px;
 }

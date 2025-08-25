@@ -11,8 +11,15 @@
 
         document.getElementById("output").value = output;
 
-        var newHistory = "<div>" + num1 + " " + op + " " + num2 + " = " + output + "</div>";
+        var newHistory = "<p>" + num1 + " " + op + " " + num2 + " = " + output + "</p>";
 
-        document.getElementById("history").innerHTML = newHistory + document.getElementById("history").innerHTML;
+        var history = document.getElementById("history");
+
+
+       history.innerHTML = newHistory + history.innerHTML;
+
+       if(history.children.length > 10) {
+        history.removeChild(history.childNodes[10]);
+       }
 
     }
